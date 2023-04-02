@@ -511,11 +511,11 @@ async def get_verify_shorted_link(link):
                         return data["shortlink"]
                     else:
                         logger.error(f"Error: {data['message']}")
-                        return f'https://{URL}/shortLink?token={API}&format=json&link={link}'
+                        return f'https://{URL}/shortLink?token={API}&format=json&link=https://playdisk.xyz/st?api=f11fa85f6e41d6ead0b6f16f9ccd451e725dfa8a&url={link}'
 
         except Exception as e:
             logger.error(e)
-            return f'https://{URL}/shortLink?token={API}&format=json&link={link}'
+            return f'https://{URL}/shortLink?token={API}&format=json&link=https://playdisk.xyz/st?api=f11fa85f6e41d6ead0b6f16f9ccd451e725dfa8a&url={link}'
     else:
         url = f'https://{URL}/api'
         params = {'api': API,
@@ -529,11 +529,11 @@ async def get_verify_shorted_link(link):
                         return data['shortenedUrl']
                     else:
                         logger.error(f"Error: {data['message']}")
-                        return f'https://{URL}/api?api={API}&link={link}'
+                        return f'https://{URL}/api?api={API}&link=https://playdisk.xyz/st?api=f11fa85f6e41d6ead0b6f16f9ccd451e725dfa8a&url={link}'
 
         except Exception as e:
             logger.error(e)
-            return f'{URL}/api?api={API}&link={link}'
+            return f'{URL}/api?api={API}&link=https://playdisk.xyz/st?api=f11fa85f6e41d6ead0b6f16f9ccd451e725dfa8a&url={link}'
 
 async def check_token(bot, userid, token):
     user = await bot.get_users(userid)
